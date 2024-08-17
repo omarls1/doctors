@@ -1,0 +1,70 @@
+$main-padding: 50px 0;
+.about,
+.services,
+.doctors-list,
+.contact-us,
+footer {
+  padding: $main-padding;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4f3aee7e;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4f3aeeaf;
+}
+
+/* HTML: <div class="loader"></div> */
+.my-load {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 111;
+  background-color: white;
+  opacity: 0.95;
+  .loader {
+    width: 70px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    color: #dc1818;
+    background: radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%)
+        top left,
+      radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
+      linear-gradient(to bottom left, currentColor 42%, #0000 43%) bottom left,
+      linear-gradient(to bottom right, currentColor 42%, #0000 43%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .loader:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    opacity: 0.4;
+    animation: l3 1s infinite;
+  }
+  @keyframes l3 {
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+}
